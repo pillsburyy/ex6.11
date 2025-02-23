@@ -66,7 +66,7 @@ class AbdullahiFunction{
                 System.out.println("Input cannot be empty. Try again.");
             }
           
-            else if (firstTest.matches("-?\\d+(\\.\\d+)?")) {
+            else if (isNumber(firstTest)){
                 System.out.println("Sorry, numbers are not allowed. Please provide a valid string.");
             } else {
                 System.out.println("You entered: " + firstTest);
@@ -74,4 +74,7 @@ class AbdullahiFunction{
             }
         }
     }
+static boolean isNumber(String input){
+return input.matches("-?\\d+(\\.\\d+)?");
+}
 }
